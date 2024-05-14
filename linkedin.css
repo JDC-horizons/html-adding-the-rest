@@ -86,9 +86,6 @@
   max-height: calc(100vh - 90px);
 }
 
-.main-content {
-}
-
 .main .main-topbar {
   display: grid;
   grid-template-columns: 1fr;
