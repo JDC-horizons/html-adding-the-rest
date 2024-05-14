@@ -1,5 +1,16 @@
 * {
   margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main-layout {
+  background-color: gainsboro;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 80px auto;
+  height: 100vh;
+  width: 100vw;
 }
 
 .box {
@@ -22,14 +33,11 @@
   max-height: 25px;
 }
 
-body {
-  background-color: gainsboro;
-}
-
 .header {
   background-color: white;
   margin-right: 20px;
-  height: 60px;
+  grid-column: 1 / -1;
+  grid-row: 1;
   display: grid;
   grid-template-columns: 55px 3fr 2fr;
   gap: 5px;
@@ -63,9 +71,10 @@ body {
 }
 
 .page {
+  grid-column: 1 / -1;
+  grid-row: 2;
   margin: 10px;
   margin-right: 20px;
-  height: 90vh;
   gap: 15px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -73,6 +82,11 @@ body {
 
 .main {
   grid-column: 2 / span 1;
+  overflow: auto;
+  max-height: calc(100vh - 90px);
+}
+
+.main-content {
 }
 
 .main .main-topbar {
@@ -105,12 +119,13 @@ body {
 
 .main .nested-grid-1 {
   display: grid;
-  height: 800px;
+  height: auto;
   grid-auto-rows: auto;
 }
 
 .main .nested-grid-1 .inner-box {
   margin: 4px;
+  height: 300px;
 }
 
 .aside.left {

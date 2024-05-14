@@ -1,12 +1,13 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
   border: 1px black dotted;
 }
 
 .main-layout {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 80px auto;
   height: 100vh;
   width: 100vw;
 }
@@ -16,7 +17,10 @@
   display: grid;
   grid-template-columns: 1fr 3fr 10fr 4fr;
   gap: 10px;
-  height: 80px;
+}
+
+.header .boxmenu {
+  display: block;
 }
 
 .page {
@@ -32,6 +36,14 @@
 
 .main {
   grid-column: 2;
+  overflow: auto;
+  max-height: calc(100vh - 90px);
+}
+
+.controlbar {
+  height: 60px;
+  display: grid;
+  grid-template-columns: 50px 40px auto 40px;
 }
 
 .inbox-email {
