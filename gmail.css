@@ -1,0 +1,58 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 1px black dotted;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  grid-row: 1 / span 1;
+  display: grid;
+  grid-template-columns: 1fr 3fr 10fr 4fr;
+  gap: 10px;
+  height: 80px;
+}
+
+.page {
+  grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: 3fr 9fr 3fr 1fr;
+  height: auto;
+}
+
+.aside.left {
+  grid-column: 1;
+}
+
+.main {
+  grid-column: 2;
+}
+
+.inbox-email {
+  display: grid;
+  grid-template-columns: 30px 30px minmax(100px, 1fr) minmax(100px, 2fr) 80px;
+  height: 40px;
+  align-items: center;
+}
+
+.aside.right {
+  grid-column: 3;
+}
+
+.aside.toolbar {
+  grid-column: 4;
+  align-content: start;
+}
+
+.aside .box {
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

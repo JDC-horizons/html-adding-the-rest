@@ -1,0 +1,111 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 80px 240px auto;
+  grid-template-rows: 80px auto;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header-bar {
+  grid-column: 2 / -1;
+  grid-row: 1;
+}
+
+.left-icon-bar {
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  border: 1px dotted black;
+  background-color: antiquewhite;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.channels-nav-bar {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.invite-area {
+  width: auto;
+  height: 200px;
+  border-top: 1px grey solid;
+  border-bottom: 1px grey solid;
+}
+
+.invite-area img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 95px;
+  margin-right: 95px;
+}
+
+.invite-area p {
+  text-align: center;
+  margin: 10px;
+}
+
+.invite-area .invite-button {
+  text-align: center;
+  place-content: center;
+  margin: 25px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: aquamarine;
+}
+
+.server-channels-menu {
+  width: auto;
+  height: calc(100% - 280px);
+  overflow: auto;
+}
+
+.channel {
+  height: auto;
+  margin: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.top-bar p {
+  display: inline-block;
+  height: auto;
+}
+
+.top-bar .name {
+  width: 210px;
+}
+
+.room {
+  height: auto;
+}
+
+.user-controls {
+  width: auto;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  align-items: center;
+}
+
+.user-controls img {
+  height: 45px;
+}
+
+.main-text-area {
+  grid-column: 3;
+  grid-row: 2;
+}
